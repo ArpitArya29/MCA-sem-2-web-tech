@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment number 1</title>
+  </head>
+
+  <body>
+    <label for="number">Enter a number: </label>
+    <input type="text" id="value" />
+    <div>
+      <button id="geneateTableButton">Generate table</button>
+    </div>
+    <p id="ans"></p>
+    <script>
+      let btn = document.getElementById("geneateTableButton");
+      btn.addEventListener("click", () => {
+        let val = document.getElementById("value").value;
+        console.log(val);
+        let ans = "";
+        for (let i = 1; i <= 10; i++) {
+          console.log(`${val} X ${i} = ${val * i}`);
+          ans += `\n${val} X ${i} = ${val * i}`;
+        }
+        let ansArea = document.getElementById("ans");
+        ansArea.innerText = ans;
+      });
+    </script>
+  </body>
+</html>
